@@ -1839,7 +1839,7 @@
             <div class="project-footer">
               <button class="case-btn" onclick="openModal('customer')">Case Study &amp; Code</button>
               <button class="git-btn" onclick="jumpToSandbox('customer')">⚡ Live Demo</button>
-              <a class="git-btn" href="https://github.com/MeshramPiyush" target="_blank" rel="noopener">GitHub ↗</a>
+              <a class="git-btn" href="https://github.com/MeshramPiyush/Customer-Shopping-And-Trend-Analysis" target="_blank" rel="noopener">GitHub ↗</a>
             </div>
           </article>
 
@@ -1870,7 +1870,7 @@
             <div class="project-footer">
               <button class="case-btn" onclick="openModal('healthcare')">Case Study &amp; Code</button>
               <button class="git-btn" onclick="jumpToSandbox('healthcare')">⚡ Live Demo</button>
-              <a class="git-btn" href="https://github.com/MeshramPiyush" target="_blank" rel="noopener">GitHub ↗</a>
+              <a class="git-btn" href="https://github.com/MeshramPiyush/Healthcare-Risk-Stratification-Analysis" target="_blank" rel="noopener">GitHub ↗</a>
             </div>
           </article>
 
@@ -1900,7 +1900,7 @@
             <div class="project-footer">
               <button class="case-btn" onclick="openModal('zepto')">Case Study &amp; Code</button>
               <button class="git-btn" onclick="jumpToSandbox('zepto')">⚡ Live Demo</button>
-              <a class="git-btn" href="https://github.com/MeshramPiyush" target="_blank" rel="noopener">GitHub ↗</a>
+              <a class="git-btn" href="https://github.com/MeshramPiyush/Zepto-SQL-Data-Analysis" target="_blank" rel="noopener">GitHub ↗</a>
             </div>
           </article>
         </div>
@@ -2181,7 +2181,7 @@
 
       <div class="modal-actions">
         <button class="btn btn-secondary" onclick="closeModal(); jumpToSandbox(activeModalKey);">⚡ Open in Live Sandbox</button>
-        <a class="btn btn-primary" href="https://github.com/MeshramPiyush" target="_blank" rel="noopener">View Repository on GitHub ↗</a>
+        <a class="btn btn-primary" id="modalGithubLink" href="https://github.com/MeshramPiyush/Customer-Shopping-And-Trend-Analysis" target="_blank" rel="noopener">View Repository on GitHub ↗</a>
       </div>
     </div>
   </div>
@@ -2950,6 +2950,7 @@ ORDER BY price_per_gram_inr ASC;`
     let activeModalKey = 'customer';
     const projectDetails = {
       customer: {
+        github: "https://github.com/MeshramPiyush/Customer-Shopping-And-Trend-Analysis",
         domain: "Retail Analytics • Sep 2026",
         title: "Customer Shopping Behavior Analysis",
         tools: "Tools: Python (Pandas), SQL Server, Power BI, Excel",
@@ -2966,6 +2967,7 @@ ORDER BY price_per_gram_inr ASC;`
         ]
       },
       healthcare: {
+        github: "https://github.com/MeshramPiyush/Healthcare-Risk-Stratification-Analysis",
         domain: "Clinical & Cost Analytics • Aug 2026",
         title: "Healthcare Risk Stratification Analysis",
         tools: "Tools: SQL Server (SSMS), Python (Pandas, NumPy, Matplotlib), Excel, Git/GitHub",
@@ -2981,6 +2983,7 @@ ORDER BY price_per_gram_inr ASC;`
         ]
       },
       zepto: {
+        github: "https://github.com/MeshramPiyush/Zepto-SQL-Data-Analysis",
         domain: "Quick-Commerce Inventory • Jul 2026",
         title: "Zepto SQL Data Analysis",
         tools: "Tools: SQL Server (SSMS), SQL",
@@ -3001,6 +3004,7 @@ ORDER BY price_per_gram_inr ASC;`
       activeModalKey = key;
       const data = projectDetails[key];
       document.getElementById('modalDomain').textContent = data.domain;
+      document.getElementById('modalGithubLink').href = data.github;
       document.getElementById('modalTitle').textContent = data.title;
       document.getElementById('modalTools').textContent = data.tools;
       document.getElementById('modalBullets').innerHTML = data.bullets.map(b => `<li>${b}</li>`).join('');
