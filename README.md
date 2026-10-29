@@ -42,7 +42,7 @@ Cleaned and analyzed product data, handled missing values and duplicates, examin
 
 ## 💼 Experience
 
-**Data Analyst Intern — Wellbridge Global Solutions**  
+**Data Analyst Intern — WellAspire Technologies**  
 *September 2026 – Present*
 
 - Clean and prepare datasets using SQL, Excel, and Python.
